@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Weather App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="search-header">
       <!-- app title  -->
       <h1>My Weather App</h1>
       <!-- a search form with label, text input, and submit input -->
@@ -18,26 +19,96 @@
       </form>
     </header>
     <div class="content-container">
-      <aside>
+      <aside class="conversion">
         <!-- (will contain a temperature conversion widget), starts empty -->
+        <h2>Temperature Conversion</h2>
+        <form class="conversion-form">
+          <label for="conversion-form">Convert the temperature:</label>
+          <input
+            id="temp-to-convert"
+            type="number"
+            name="temperature"
+            required
+          />
+          <fieldset class="form-group">
+            <label class="form-radio">
+              To Celsius
+              <input id="to-c" name="convert-temp" type="radio" value="c" />
+            </label>
+            <label class="form-radio">
+              To Fahrenheit
+              <input id="to-f" name="convert-temp" type="radio" value="f" />
+            </label>
+            <button type="submit">Convert Temp.</button>
+            <!-- this h4 will contain the result of the conversion calculation -->
+            <h4></h4>
+          </fieldset>
+        </form>
       </aside>
       <main>
         <article>
+          <!-- Paragraph should only appear if no location is entered -->
+          <p>Choose a location to view the weather.</p>
           <!-- this will contain the current weather (starts empty) -->
+          <!-- added sun icon, however image should be dynamic based on weather conditions -->
+          <img src="./assets/icons8-summer.gif" alt="sun icon" />
+          <h2>Manhattan</h2>
+
+          <ul>
+            <li><strong>Neartest Area:</strong> Chelsea</li>
+            <li><strong>Region:</strong> New York</li>
+            <li><strong>Country:</strong> United States of America</li>
+            <li><strong>Currently:</strong> Feels like 50&#176;F</li>
+            <li><strong>Chance of Sunshine:</strong> 86%</li>
+            <li><strong>Chance of Rain:</strong> 0%</li>
+            <li><strong>Chance of Snow:</strong> 0%</li>
+          </ul>
         </article>
-        <aside>
+        <!-- Need to use "hidden" to hide this section until a location is provided. Each article with UL will be replace with API data. -->
+        <aside class="forecast">
           <!-- this will contain 3 article elements that will have upcoming weather (starts empty) -->
-          <article></article>
-          <article></article>
-          <article></article>
+          <article>
+            <h3>Today</h3>
+            <ul>
+                <li><strong>Avg Temp:</strong>48&#176;F</li>
+                <li><strong>Max Temp:</strong>55&#176;F</li>
+                <li><strong>Min Temp:</strong>42&#176;F</li>
+            </ul>
+          <article>
+            <h3>Tomorrow</h3>
+            <ul>
+              <li><strong>Avg Temp:</strong>51&#176;F</li>
+              <li><strong>Max Temp:</strong>60&#176;F</li>
+              <li><strong>Min Temp:</strong>46&#176;F</li>
+            </ul>
+          </article>
+          <article>
+            <h3>After Tomorrow</h3>
+            <ul>
+              <li><strong>Avg Temp:</strong>48&#176;F</li>
+              <li><strong>Max Temp:</strong>49&#176;F</li>
+              <li><strong>Min Temp:</strong>42&#176;F</li>
+            </ul>
+          </article>
         </aside>
       </main>
       <aside>
-        <!-- will contain weather history) -->
+        <!-- This next section will contain search history.  On page load it should have the H4 and paragraph with empty UL
+        When a location is searched, the location and "feels like" temp are appended as a LI in the UL.
+        If a previous search link is clicked, the search is performed with NO change to the LI list. -->
         <section>
           <h4>Previous Searches</h4>
+          <!-- This paragraph should only appear before a location is entered. Once a location is searched, the empty UL will appear instead with the location and "feels like" URL -->
           <p>No previous searches.</p>
-          <ul></ul>
+          <ul>
+            <!-- JS is needed for handling results when opening search history links -->
+            <li><a href="#">New York</a> - 54&#176;F</li>
+            <li><a href="#">Los Angeles</a> - 70&#176;F</li>
+            <li><a href="#">Chicago</a> - 48&#176;F</li>
+            <li><a href="#">Washington DC</a> - 52&#176;F</li>
+            <li><a href="#">San Francisco</a> - 67&#176;F</li>
+            <li><a href="#">Morgantown</a> - 59&#176;F</li>
+          </ul>
         </section>
       </aside>
     </div>
