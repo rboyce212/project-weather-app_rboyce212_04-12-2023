@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <header>
+                    <fieldset class="searchbox">
+                        <h1>Weather App</h1>
+                        <form id="search">
+                            <label>
+                            <strong>Enter a Location</strong>
+                            <input 
+                                id="search-input" 
+                                name="input" 
+                                type="text" 
+                                placeholder="...your city name here."
+                            />
+                            </label>
+                            <input 
+                                type="submit" 
+                                value="Get Weather" 
+                            /> 
+                        </form>
+                     </fieldset>
+                </header>
+            </div>
+        <main>
+            <div class="main">
+                <aside hidden></aside>
+                <span class="landingpage">
+                    <p class="instruction" id="enter-location">Enter a location to view the weather.</p>
+                </span>
+                <div class="forecast">
+                    <article class="forecast" id="forecast-container">
+                        <aside>
+                            <article class="centered" id="today">
+                                <h3>Today</h3>
+                            </article>
+                            <article class="centered" id="tomorrow">
+                                <h3>Tomorrow</h3>
+                            </article>
+                            <article class="centered" id="day-after">
+                                <h3>Day After Tomorrow</h3
+                            ></article>
+                        </aside>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <div class="sidebar">
+            <aside>
+                <section class="history">
+                    <h4> Search History:</h4>
+                        <nav>
+                            <ul class="history"></ul>
+                            <p class="startup-text">No previous searches.</p>
+                        </nav>
+                </section>
+            </aside>
+        </div>
+    </body>
+</htmL>
+
+
+
+
+
