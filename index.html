@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+  </head>
+  <body>
+    <header>
+      <!-- app title  -->
+      <h1>My Weather App</h1>
+      <!-- a search form with label, text input, and submit input -->
+      <form class="search-location">
+        <label for="search-input">Enter your location:</label>
+        <input id="search-input" type="text" name="search" required />
+        <button type="submit">Get Weather</button>
+      </form>
+    </header>
+    <div class="content-container">
+      <aside>
+        <!-- (will contain a temperature conversion widget), starts empty -->
+      </aside>
+      <main>
+        <article>
+          <!-- this will contain the current weather (starts empty) -->
+        </article>
+        <aside>
+          <!-- this will contain 3 article elements that will have upcoming weather (starts empty) -->
+          <article></article>
+          <article></article>
+          <article></article>
+        </aside>
+      </main>
+      <aside>
+        <!-- will contain weather history) -->
+        <section>
+          <h4>Previous Searches</h4>
+          <p>No previous searches.</p>
+          <ul></ul>
+        </section>
+      </aside>
+    </div>
+  </body>
+</html>
