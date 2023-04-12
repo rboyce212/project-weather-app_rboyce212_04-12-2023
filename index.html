@@ -21,7 +21,7 @@
     <div class="content-container">
       <aside class="conversion">
         <!-- (will contain a temperature conversion widget), starts empty -->
-        <h2>Temperature Conversion</h2>
+        <h4>Temperature Conversion</h4>
         <form class="conversion-form">
           <label for="conversion-form">Convert the temperature:</label>
           <input
@@ -35,18 +35,19 @@
               To Celsius
               <input id="to-c" name="convert-temp" type="radio" value="c" />
             </label>
+            <br />
             <label class="form-radio">
               To Fahrenheit
               <input id="to-f" name="convert-temp" type="radio" value="f" />
             </label>
-            <button type="submit">Convert Temp.</button>
+            <button id="convert-button" type="submit">Convert Temp.</button>
             <!-- this h4 will contain the result of the conversion calculation -->
-            <h4></h4>
+            <h4>&#176;F</h4>
           </fieldset>
         </form>
       </aside>
-      <main>
-        <article>
+      <main class="current-details">
+        <article class="location">
           <!-- Paragraph should only appear if no location is entered -->
           <p>Choose a location to view the weather.</p>
           <!-- this will contain the current weather (starts empty) -->
@@ -70,10 +71,11 @@
           <article>
             <h3>Today</h3>
             <ul>
-                <li><strong>Avg Temp:</strong>48&#176;F</li>
-                <li><strong>Max Temp:</strong>55&#176;F</li>
-                <li><strong>Min Temp:</strong>42&#176;F</li>
+              <li><strong>Avg Temp:</strong>48&#176;F</li>
+              <li><strong>Max Temp:</strong>55&#176;F</li>
+              <li><strong>Min Temp:</strong>42&#176;F</li>
             </ul>
+          </article>
           <article>
             <h3>Tomorrow</h3>
             <ul>
@@ -92,7 +94,7 @@
           </article>
         </aside>
       </main>
-      <aside>
+      <aside class="history">
         <!-- This next section will contain search history.  On page load it should have the H4 and paragraph with empty UL
         When a location is searched, the location and "feels like" temp are appended as a LI in the UL.
         If a previous search link is clicked, the search is performed with NO change to the LI list. -->
@@ -112,5 +114,6 @@
         </section>
       </aside>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
